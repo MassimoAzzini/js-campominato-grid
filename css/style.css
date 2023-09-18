@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: darkolivegreen;
+  color: darkcyan;
+}
+
+section .cst-menu {
+  width: 300px;
+}
+
+.content {
+  width: 600px;
+  height: 600px;
+}
+
+.square {
+  cursor: pointer;
+  width: calc(100% / 10);
+  aspect-ratio: 1 / 1;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  background-color: darkgray;
+}
+
+/* .square span {
+  display: none;
+} */
+
+
+
+
+
+
+
+
+.square.active {
+  background-color: red;
+}
+
+.square.easy {
+  width: calc(100% / 10);
+}
+
+.square.medium {
+  width: calc(100% / 9);
+}
+
+.square.hard {
+  width: calc(100% / 7);
+}
+
