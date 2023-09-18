@@ -2,11 +2,22 @@ const content = document.querySelector('.content');
 
 reset();
 
+
+
+
 for(let i = 1; i <= 100; i++ ){
 
   const square = createSquare (i);
+
+  square.addEventListener('click', function(){
+
+    this.classList.toggle('active');
+    console.log(this._squareID);
+
+  });
   
   content.append(square);
+  
 };
 
 
@@ -14,6 +25,7 @@ for(let i = 1; i <= 100; i++ ){
 function createSquare (index){
   const newSquare = document.createElement('div');
   newSquare.className = 'square';
+  newSquare._squareID = index;
   newSquare.innerHTML = `<span>${index}</span>`;
   return newSquare;
 };
