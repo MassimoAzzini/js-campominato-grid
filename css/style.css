@@ -19,6 +19,9 @@ section .cst-menu {
 }
 
 .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   width: calc(100% / 10);
   aspect-ratio: 1 / 1;
@@ -28,9 +31,9 @@ section .cst-menu {
   background-color: darkgray;
 }
 
-/* .square span {
+.square span {
   display: none;
-} */
+}
 
 
 
