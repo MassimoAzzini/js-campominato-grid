@@ -23,7 +23,6 @@ section .cst-menu {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: calc(100% / 10);
   aspect-ratio: 1 / 1;
   border: 2px solid white;
   color: white;
@@ -36,17 +35,11 @@ section .cst-menu {
 }
 
 
-
-
-
-
-
-
 .square.active {
   background-color: red;
 }
 
-.square.easy {
+.square.hard {
   width: calc(100% / 10);
 }
 
@@ -54,7 +47,7 @@ section .cst-menu {
   width: calc(100% / 9);
 }
 
-.square.hard {
+.square.easy {
   width: calc(100% / 7);
 }
 
