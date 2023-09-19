@@ -39,15 +39,15 @@ section .cst-menu {
   background-color: red;
 }
 
-.square.hard {
+.hard {
   width: calc(100% / 10);
 }
 
-.square.medium {
+.medium {
   width: calc(100% / 9);
 }
 
-.square.easy {
+.easy {
   width: calc(100% / 7);
 }
 

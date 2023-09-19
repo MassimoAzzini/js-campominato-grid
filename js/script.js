@@ -1,19 +1,17 @@
 const content = document.querySelector('.content');
 const btn = document.querySelector('.btn');
-const formSelect = document.getElementById('inputGroupSelect04').value;
-
-let numberSquare = numberSquareForLine();
-
+let formSelect;
 reset();
 
 btn.addEventListener('click', function(){
-
-  reset();
   
-  for(let i = 1; i <= numberSquare; i++ ){
+  reset();
+  formSelect = document.getElementById('inputGroupSelect04').value;
+  
+  for(let i = 1; i <= numberSquare(); i++ ){
     
     let square = createSquare (i);
-    
+    content.append(square);
     square.addEventListener('click', function(){
       
       this.classList.toggle('active');
@@ -22,7 +20,7 @@ btn.addEventListener('click', function(){
       
     });
     
-    content.append(square);
+    console.log(square)
   };
   
 });
@@ -30,24 +28,28 @@ btn.addEventListener('click', function(){
 
 function createSquare (index){
   const newSquare = document.createElement('div');
-  newSquare._squareID = index;
-  newSquare.innerHTML = `<span>${index}</span>`;
 
+  newSquare._squareID = index;
+  newSquare.className = 'square'
+
+  newSquare.innerHTML = `<span>${index}</span>`;
+  
   if(formSelect == 2){ 
 
-    newSquare.classList.add('square', 'medium'); 
+    newSquare.classList.add('medium'); 
 
   }else if(formSelect == 3){
 
-    newSquare.classList.add('square', 'hard');
+    newSquare.classList.add('hard');
 
   }else if(formSelect == 1){
 
-    newSquare.classList.add('square', 'easy');
+    newSquare.classList.add('easy');
 
   }
 
   return newSquare;
+
 };
 
 
@@ -55,9 +57,9 @@ function reset(){
   content.innerHTML = '';
 };
 
-function numberSquareForLine(){
+function numberSquare(){
   if(formSelect == 2) return 81;
   else if(formSelect == 3) return 100;
   else if(formSelect == 1) return 49;
-
 };
+
