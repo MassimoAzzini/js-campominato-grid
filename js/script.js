@@ -59,7 +59,7 @@ function reset(){
 
 function numberSquare(){
   if(formSelect == 2) return 81;
-  else if(formSelect == 3) return 100;
-  else if(formSelect == 1) return 49;
+  else if(formSelect == 1) return 100;
+  else if(formSelect == 3) return 49;
 };
 
